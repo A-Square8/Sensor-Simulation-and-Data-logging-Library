@@ -13,12 +13,10 @@
 // Default sensor surface area (m²) 
 #define DEFAULT_AREA 0.0012
 
-// Drift parameters
-#define DRIFT_RATE 0.006  
-#define SENSOR_ERROR_THERMOOPTICAL 1.5  
+
 
 // Function to calculate emitted power based on temperature
-double cal_thermal_radiation(double temperature, int years, double emissivity, double area) {
+double cal_thermal_radiation(double temperature, int years, double emissivity, double area,int DRIFT_RATE,int SENSOR_ERROR_THERMOOPTICAL) {
     double temp_K = temperature + 273.15;
     double drift_factor = 1 + (DRIFT_RATE * years);
     double power = STEFAN_BOLTZMANN * emissivity * area * pow(temp_K, 4) * drift_factor;

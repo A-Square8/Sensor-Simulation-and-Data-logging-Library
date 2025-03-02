@@ -7,12 +7,9 @@
 // Seebeck Coefficient 
 #define SEEBECK_COEFF 0.064  
 
-// Drift parameters
-#define DRIFT_RATE 0.006  
-#define SENSOR_ERROR_THERMOELECTRIC 2.5  
 
 // Function to calculate thermoelectric voltage
-double cal_thermoelectric_voltage(double hot_temp, double cold_temp, int years) {
+double cal_thermoelectric_voltage(double hot_temp, double cold_temp, int years,int DRIFT_RATE,int  SENSOR_ERROR_THERMOELECTRIC ) {
     double delta_T = hot_temp - cold_temp;
 
     // Apply drift over time

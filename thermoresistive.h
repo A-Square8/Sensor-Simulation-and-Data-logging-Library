@@ -13,12 +13,10 @@
 #define B 2.378405444e-04
 #define C 2.019202697e-07
 
-// Drift parameters
-#define DRIFT_RATE 0.006  
-#define SENSOR_ERROR_THERMORESSITIVE 1.0  
+
 
 // Function to calculate resistance for RTD given a temperature
-double cal_res_rtd(double temperature, int years) {
+double cal_res_rtd(double temperature, int years,int DRIFT_RATE,int SENSOR_ERROR_THERMORESSITIVE ) {
     double drift_factor = 1 + (DRIFT_RATE * years);
     double resistance = RO * (1 + ALPHA * temperature) * drift_factor;
     double error = ((rand() % 2001) - 1000) / 1000.0 * SENSOR_ERROR_THERMORESSITIVE;
@@ -26,7 +24,7 @@ double cal_res_rtd(double temperature, int years) {
 }
 
 // Function to calculate resistance for a thermistor given a temperature
-double cal_res_thermistor(double temperature, int years) {
+double cal_res_thermistor(double temperature, int years,int DRIFT_RATE,int SENSOR_ERROR_THERMORESSITIVE) {
     double inv_T = 1.0 / (temperature + 273.15); 
     double R = (inv_T - A) / (B + C * pow((inv_T - A), 2));
     double resistance = exp(R);
