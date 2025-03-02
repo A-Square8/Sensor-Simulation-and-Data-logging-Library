@@ -6,17 +6,13 @@ Support for multiple sensor types:
 
 Temperature Sensors
 
-Optical Sensors
+Thermo-optical
 
-Electric and Magnetic Sensors
+Thermoresistive (RTD and Thermistor)
 
-Mechanical Sensors
+Thermoacoustic
 
-Acoustic Sensors
-
-Chemical Sensors
-
-
+Thermoelectric
 
 Easy-to-use API for each sensor type
 
@@ -52,4 +48,4 @@ Contributing
 Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
 
 License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License - see the LICENSE.md file for details
