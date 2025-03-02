@@ -4,12 +4,7 @@ A comprehensive library for interfacing with various sensors in embedded systems
 
 ## Features
 
-- Support for multiple sensor types:
-  - **Temperature Sensors**
-    - Thermo-optical
-    - Thermoresistive (RTD and Thermistor)
-    - Thermoacoustic
-    - Thermoelectric
+- Support for multiple sensor types
 - Easy-to-use API for each sensor type
 - Drift and error simulation for realistic sensor behavior
 - Customizable parameters for each sensor
