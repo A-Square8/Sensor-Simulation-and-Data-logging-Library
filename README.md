@@ -36,9 +36,7 @@ printf("Emitted power: %.6f W\n", power);
 
 Refer to individual header files for detailed API documentation.
 
-## Contributing
 
-Please read `CONTRIBUTING.md` for details on our code of conduct and the process for submitting pull requests.
 
 ## License
 
